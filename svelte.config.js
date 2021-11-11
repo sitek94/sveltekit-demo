@@ -1,7 +1,8 @@
 import preprocess from 'svelte-preprocess';
 import adapterStatic from '@sveltejs/adapter-static';
+import fs from 'fs';
 
-import pkg from './package.json';
+const pkg = JSON.parse(fs.readFileSync(new URL('package.json', import.meta.url), 'utf8'));
 
 const isDev = process.env.NODE_ENV === 'development';
 
