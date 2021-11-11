@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Svelte Static Starter</title>
+    
+
+		
+
+		<link rel="modulepreload" href="/svelte-static-starter/_app/start-c187ed71.js">
+		<link rel="modulepreload" href="/svelte-static-starter/_app/chunks/vendor-af0f2ef7.js">
+		<link rel="modulepreload" href="/svelte-static-starter/_app/layout.svelte-712392a1.js">
+		<link rel="modulepreload" href="/svelte-static-starter/_app/pages/index.svelte-8f7fade0.js">
+		<link rel="stylesheet" href="/svelte-static-starter/_app/assets/start-61d1577b.css">
+
+		<script type="module">
+			import { start } from "/svelte-static-starter/_app/start-c187ed71.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"/svelte-static-starter","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/svelte-static-starter/_app/layout.svelte-712392a1.js"),
+						import("/svelte-static-starter/_app/pages/index.svelte-8f7fade0.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "\u002F",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+  </head>
+  <body>
+    <div id="svelte">
+
+
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+
+
+			
+		</div>
+  </body>
+</html>
