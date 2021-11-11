@@ -2,8 +2,9 @@ import preprocess from 'svelte-preprocess';
 import adapterStatic from '@sveltejs/adapter-static';
 import fs from 'fs';
 
+// https://kit.svelte.dev/faq#read-package-json
 const pkg = JSON.parse(fs.readFileSync(new URL('package.json', import.meta.url), 'utf8'));
-
+console.log(pkg);
 const isDev = process.env.NODE_ENV === 'development';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -26,7 +27,7 @@ const config = {
     paths: {
       // By default project name is used as a base path, read more:
       // https://github.com/sveltejs/kit/tree/master/packages/adapter-static#github-pages
-      base: isDev ? '' : pkg.name,
+      base: isDev ? '' : `/${pkg.name}`,
     },
   },
 };
