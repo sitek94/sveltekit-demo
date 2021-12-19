@@ -4,7 +4,7 @@ import fs from 'fs';
 
 // https://kit.svelte.dev/faq#read-package-json
 const pkg = JSON.parse(fs.readFileSync(new URL('package.json', import.meta.url), 'utf8'));
-console.log(pkg);
+
 const isDev = process.env.NODE_ENV === 'development';
 
 /** @type {import('@sveltejs/kit').Config} */
