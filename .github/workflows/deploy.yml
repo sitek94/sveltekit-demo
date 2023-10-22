@@ -31,6 +31,8 @@ jobs:
 
       - name: 🛠️ Build project
         run: pnpm build
+        env:
+          PUBLIC_ENV_VAR: ${{ secrets.PUBLIC_ENV_VAR }}
 
       - name: 📤 Upload production-ready build files
         uses: actions/upload-artifact@v2
